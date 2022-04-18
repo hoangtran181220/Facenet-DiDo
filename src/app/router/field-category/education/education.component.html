@@ -1,0 +1,14 @@
+<div class="block_education">
+  <div class="block_education-heading">
+    <span class="block_education-heading-text">Giáo dục</span>
+  </div>
+  <div class="block_education-content">
+    <div class="block_education-content-item" *ngFor="let product of productsEducation">
+      <img class="block_education-content-item--img" [src]=product.imgSrc>
+      <p class="block_education-content-item--name">{{ product.name }}</p>
+      <span class="block_education-content-item--cooperate">{{ product.cooperate }}</span>
+      <span class="block_education-content-item--desc">{{ product.desc }}</span>
+      <img class="block_education-content-item--rate" [src]=product.imgRate>
+    </div>
+  </div>
+</div>
