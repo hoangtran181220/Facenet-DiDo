@@ -36,3 +36,9 @@ app-field-category {
   width: 100%;
 }
 
+
+app-crud-products {
+  display: block;
+  width: 100%;
+  height: 100%;
+}

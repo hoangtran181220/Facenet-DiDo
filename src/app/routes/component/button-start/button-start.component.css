@@ -1,16 +1,17 @@
-
-.header_form-register {
-  height: 40px;
-  width: 108px;
+.form-start {
+  height: 49px;
+  width: 140px;
   display: flex;
   align-items: center;
   background-color: #169BD5;
   border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
 }
 
-.header_form-login-register {
+.form-start-name {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 13px;
+  font-size: 16px;
   color: #ffffff;
-  padding-left: 26px;
+  padding-left: 41px;
 }
