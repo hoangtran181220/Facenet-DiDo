@@ -16,6 +16,7 @@ import { ButtonStartComponent } from './routes/component/button-start/button-sta
 import { FormRegisterComponent } from './routes/component/form-register/form-register.component';
 import { FormInputComponent } from './routes/component/form-input/form-input.component';
 import { CrudProductsComponent } from './admin/crud-products/crud-products.component';
+import { CreateProductsComponent } from './admin/crud-products/create-products/create-products.component';
 import { GetProductsComponent } from './admin/crud-products/get-products/get-products.component';
 
 @NgModule({
@@ -34,6 +35,7 @@ import { GetProductsComponent } from './admin/crud-products/get-products/get-pro
     FormRegisterComponent,
     FormInputComponent,
     CrudProductsComponent,
+    CreateProductsComponent,
     GetProductsComponent
   ],
   imports: [
