@@ -28,6 +28,7 @@
     </div>
   </div>
   <div class="products_crud-content">
-
+      <app-get-products *ngIf="isShow == 0"></app-get-products>
+      <app-create-products *ngIf="isShow == 1"></app-create-products>
   </div>
 </div>

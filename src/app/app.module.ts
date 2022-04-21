@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { FormRegisterComponent } from './routes/component/form-register/form-reg
 import { FormInputComponent } from './routes/component/form-input/form-input.component';
 import { CrudProductsComponent } from './admin/crud-products/crud-products.component';
 import { GetProductsComponent } from './admin/crud-products/get-products/get-products.component';
+import { CreateProductsComponent } from './admin/crud-products/create-products/create-products.component';
 
 @NgModule({
   declarations: [
@@ -34,11 +36,13 @@ import { GetProductsComponent } from './admin/crud-products/get-products/get-pro
     FormRegisterComponent,
     FormInputComponent,
     CrudProductsComponent,
-    GetProductsComponent
+    GetProductsComponent,
+    CreateProductsComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
