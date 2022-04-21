@@ -20,23 +20,15 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>ID Sản phẩm</td>
-            <td>Tên Sản phẩm</td>
-            <td><img class="product_get-content-center--img" src="../../../../assets/images/app/u1185.png"></td>
-            <td>Mô tả</td>
-            <td>Đánh giá</td>
-            <td>Trạng thái</td>
-            <td>Tạo ngày</td>
-          </tr>
-          <tr>
-            <td>ID Sản phẩm</td>
-            <td>Tên Sản phẩm</td>
-            <td><img class="product_get-content-center--img" src="../../../../assets/images/app/u1205.png"></td>
-            <td>Mô tả</td>
-            <td>Đánh giá</td>
-            <td>Trạng thái</td>
-            <td>Tạo ngày</td>
+          <tr *ngFor="let product of products">
+            <td>{{ product.productId }}</td>
+            <td>{{ product.productName }}</td>
+            <td><img class="product_get-content-center--img" [src]="product.images"></td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.rating }}</td>
+            <td *ngIf="product.status == true" style="color: rgb(16, 188, 16);">Activice</td>
+            <td *ngIf="product.status == false" style="color: rgb(249, 39, 39);" >UnActivice</td>
+            <td>{{ product.createdDate }}</td>
           </tr>
         </tbody>
       </table>

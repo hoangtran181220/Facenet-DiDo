@@ -23,6 +23,7 @@
             placeholder="Tên sản phẩm"
             id="input-name-products"
             class="input-style"
+            (input)="getProductName($event)"
           />
         </div>
       </div>
@@ -32,10 +33,11 @@
             >Nhập đơn vị cung cấp:
           </span>
           <input
-            type="text"
+            type="number"
             placeholder="Đơn vị cung cấp"
             id="input-vendor-products"
             class="input-style"
+            (input)="getSupplier($event)"
           />
         </div>
       </div>
@@ -46,6 +48,7 @@
           placeholder="Ảnh sản phẩm"
           id="input-img-products"
           class="input-style"
+          (input)="getSrcImage($event)"
         />
       </div>
       <div class="block-create-products-desc">
@@ -55,15 +58,17 @@
           placeholder="Mô tả sản phẩm"
           id="input-desc-products"
           class="input-style"
+          (input)="getProductDesc($event)"
         />
       </div>
       <div class="block-create-products-rate">
         <span class="label-create-products-rate">Đánh giá về sản phẩm: </span>
         <input
-          type="text"
+          type="number"
           placeholder="Đánh giá sản phẩm"
           id="input-rate-products"
           class="input-style"
+          (input)="getProductRate($event)"
         />
       </div>
       <div class="block-create-products-date-create">
@@ -75,19 +80,20 @@
           placeholder="dd/mm/yyyy"
           id="input-date-products"
           class="input-style"
+          (input)="getTimeCreate($event)"
         />
       </div>
       <div class="block-create-products-status">
         <span class="label-create-products-status">Trạng thái hoạt động: </span>
-        <select title="status-item" id="status-option-item">
-          <option>Activice</option>
-          <option>UnActivice</option>
+        <select title="status-item" id="status-option-item" (click)="getStatus($event)">
+          <option value="1">Activice</option>
+          <option value="0">UnActivice</option>
         </select>
       </div>
       <div class="block-list-catogory">
         <span class="label-create-products-status">Danh mục: </span>
 
-        <select title="catogory-list" id="catogory-list-item">
+        <select title="catogory-list" id="catogory-list-item" (click)="getCategory($event)">
           <option value="1">Giáo dục</option>
           <option value="2">Y tế</option>
           <option value="3">Giao thông</option>
@@ -98,7 +104,7 @@
     </div>
     <div class="block-add-produst-item">
       <div>
-        <input type="button" value="Thêm sản phẩm" class="add-product-btn" />
+        <input type="button" value="Thêm sản phẩm" class="add-product-btn" (click)="handleSubmitProduct()"/>
       </div>
     </div>
   </div>

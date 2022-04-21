@@ -19,6 +19,8 @@ import { FormInputComponent } from './routes/component/form-input/form-input.com
 import { CrudProductsComponent } from './admin/crud-products/crud-products.component';
 import { GetProductsComponent } from './admin/crud-products/get-products/get-products.component';
 import { CreateProductsComponent } from './admin/crud-products/create-products/create-products.component';
+import { EvaluateComponent } from './layout/evaluate/evaluate.component';
+import { FormLoginComponent } from './routes/component/form-login/form-login.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { CreateProductsComponent } from './admin/crud-products/create-products/c
     FormInputComponent,
     CrudProductsComponent,
     GetProductsComponent,
-    CreateProductsComponent
+    CreateProductsComponent,
+    EvaluateComponent,
+    FormLoginComponent
   ],
   imports: [
     BrowserModule,

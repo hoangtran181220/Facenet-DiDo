@@ -1,0 +1,27 @@
+
+<div class="block-evaluate">
+  <h2 class="heading-evaluate">Khách hàng nói gì về chúng tôi</h2>
+  <div class="box-evaluate">
+    <div class="block-evaluate-customer-content-item"*ngFor="let evaluate of evaluateCustomer">
+      <img title="evaluate-customer-content-item-img" class="block-evaluate-customer-content-item-img" [src]="evaluate.imgSrc" >
+      <span class="block-evaluate-customer-content-item-name">{{evaluate.name}}</span>
+      <span class="block-evaluate-customer-content-item-info">{{evaluate.info}}</span>
+      <p class="block-evaluate-customer-content-item-comment">{{evaluate.comment}}</p>
+    </div>
+  </div>
+  <div class="block-company-custormer">
+    <p class="partner-text">Các doanh nghiệp đã tin dùng</p>
+    <div class="box-company-partner"*ngFor="let evaluate of evaluateCustomer">
+      <span class="company-partner-name">{{evaluate.companyName}}</span>
+    </div>
+    <span class="content-partner-text-1">Trở thành đối tác của chúng tôi</span>
+    <span class="content-partner-text-2">Tiếp cận tập khách hàng 500.000+ doanh nghiệp. Sử dụng các dịch vụ do Dido cung cấp để xây dựng ứng dụng chất lượng hơn và tiết kiệm chi phí phát triển.</span>
+      <div class="partner-btn">
+        <input type="button" class="partner-btn-item"  value="Trở thành đối tác">
+    </div>
+  </div>
+  </div>
+
+
+
+

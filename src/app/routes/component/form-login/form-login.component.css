@@ -1,0 +1,84 @@
+.form_login {
+  position: absolute;
+  top: 124px;
+  left: 531px;
+  width: 413px;
+  height: 280px;
+  background-color: #ffffff;
+  box-shadow: 0px 1px 8px rgb(0 0 0 / 35%);
+  border-radius: 4px;
+}
+
+.form_login-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 32px;
+  font-size: 18px;
+  font-family: Arial;
+}
+
+.form_login-header-close {
+
+}
+
+.form_login-content {
+
+}
+
+.form_login-content-input {
+  padding: 24px 35px;
+}
+
+.header_search {
+  flex: 2.35;
+  height: 100%;
+}
+
+.header_search-input {
+   width: 340px;
+   height: 100%;
+   display: flex;
+   align-items: center;
+   position: relative;
+   margin-bottom: 12px;
+}
+
+.header_search-input-e {
+  width: 100%;
+  height: 44px;
+  border: 1px solid #e1e0e0;
+  border-radius: 3px;
+  padding-left: 15px;
+}
+
+.header_search-icon {
+  position: absolute;
+  top: 22px;
+  right: 18px;
+  width: 16px;
+  height: 16px;
+}
+
+
+.form_login-action {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  padding: 0 35px;
+}
+
+.header_form-login {
+  width: 340px;
+  height: 38px;
+  background-color: #169BD5;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header_form-login-name {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+  color: #ffffff;
+}
