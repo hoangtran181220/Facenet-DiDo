@@ -24,6 +24,12 @@
     flex-direction: column;
     font-family: Arial, Helvetica, sans-serif;
 }
+.block-create-products-content{
+  margin: 0 32px;
+  background-color: #ffffff;
+  padding: 32px 0;
+  border-radius: 5px;
+}
 .block-create-products{
   display: grid;
   justify-content: space-around;
@@ -42,7 +48,7 @@
   transition: 0.5s;
   outline: none;
   border-radius: 4px;
-  font-size: 18px;
+  font-size: 14px;
 }
 .input-style:focus{
   background-color: lightblue;
