@@ -18,6 +18,7 @@ import { FormInputComponent } from './routes/component/form-input/form-input.com
 import { CrudProductsComponent } from './admin/crud-products/crud-products.component';
 import { CreateProductsComponent } from './admin/crud-products/create-products/create-products.component';
 import { GetProductsComponent } from './admin/crud-products/get-products/get-products.component';
+import { EvaluateComponent } from './routes/evaluate/evaluate.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { GetProductsComponent } from './admin/crud-products/get-products/get-pro
     FormInputComponent,
     CrudProductsComponent,
     CreateProductsComponent,
-    GetProductsComponent
+    GetProductsComponent,
+    EvaluateComponent
   ],
   imports: [
     BrowserModule,
