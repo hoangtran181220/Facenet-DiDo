@@ -1,7 +1,7 @@
-<div class="form_login">
+<div class="form_login" [style.display]="isCheckShowFormLogin">
   <div class="form_login-header">
     <span>Đăng nhập</span>
-    <div class="form_login-header-close">
+    <div class="form_login-header-close" (click)="handleShowFormLogin()">
       <img src="../../../../assets/images/index/u131.svg" alt="">
     </div>
   </div>

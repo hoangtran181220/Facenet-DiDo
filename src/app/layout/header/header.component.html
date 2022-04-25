@@ -1,8 +1,8 @@
 <div class="header">
-  <div class="header_logo">
+  <div class="header_logo" routerLink="/" routerLinkActive="active">
     <img src="../../assets/images/index/u84.png" class="header_logo-img">
     <div class="header_logo-name">
-      <span>DIDO</span>
+      <spanr outerLink="/" routerLinkActive="active">DIDO</spanr>
     </div>
   </div>
   <div class="header_list">
@@ -13,25 +13,9 @@
       <div (click)="toggleHideSubMenu()" class="header_list-name">
         <span>Danh mục</span>
         <div class="header_list-sub-menu">
-          <li class="header_list-sub-menu-item">
-            <img class="header_list-sub-menu-item--img" src="../../assets/images/index/u179.svg">
-            <span>Giáo dục</span>
-          </li>
-          <li class="header_list-sub-menu-item">
-            <img class="header_list-sub-menu-item--img" src="../../assets/images/index/u184.svg">
-            <span>Y tế</span>
-          </li>
-          <li class="header_list-sub-menu-item">
-            <img class="header_list-sub-menu-item--img" src="../../assets/images/index/u186.svg">
-            <span>Giao thông</span>
-          </li>
-          <li class="header_list-sub-menu-item">
-            <img class="header_list-sub-menu-item--img" src="../../assets/images/index/u187.svg">
-            <span>Bán lẻ</span>
-          </li>
-          <li class="header_list-sub-menu-item">
-            <img class="header_list-sub-menu-item--img" src="../../assets/images/index/u185.svg">
-            <span>Ngân hàng</span>
+          <li class="header_list-sub-menu-item" *ngFor="let category of categoryList" (click)="getCategoryId(category.catergoryId)" routerLink="/product" routerLinkActive="active" >
+            <img class="header_list-sub-menu-item--img" [src]="category.icon">
+            <span>{{ category.categoryName }}</span>
           </li>
         </div>
       </div>
@@ -58,4 +42,5 @@
     <app-button-login></app-button-login>
     <app-button-register></app-button-register>
   </div>
+  <app-form-login></app-form-login>
 </div>

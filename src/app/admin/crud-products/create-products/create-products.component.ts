@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, ViewRef } from '@angular/core';
 import { DataService } from 'src/app/data.service';
+import { CategoryService } from 'src/app/service/category.service';
 import { ProductService } from 'src/app/service/product.service';
 
 @Component({
@@ -17,10 +18,14 @@ export class CreateProductsComponent implements OnInit {
   private status ?: number
   private categoryId ?: number
   private productSave : any
+  categoryList : any
 
-  constructor(private product : ProductService, private _dataService : DataService) { }
+  constructor(private product : ProductService, private category : CategoryService, private _dataService : DataService) { }
 
   ngOnInit(): void {
+    this.category.getCategory().subscribe(
+      res => this.categoryList = res
+    )
   }
 
   getProductName(event : any) {

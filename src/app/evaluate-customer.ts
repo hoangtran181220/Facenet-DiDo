@@ -22,5 +22,5 @@ export const evaluateCustomer = [
     info:'Vinamilk',
     comment:'My children and I LOVE Dido! The courses are fantastic and the instructors are so fun and knowledgeable. I only wish we found it sooner.',
     companyName:'Vinamilk'
-  },
+  }
 ]

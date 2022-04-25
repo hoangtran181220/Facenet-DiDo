@@ -1,6 +1,6 @@
-import { productsEducation } from './../../products-education';
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/data.service';
+import { ProductService } from 'src/app/service/product.service';
 
 @Component({
   selector: 'app-content',
@@ -8,13 +8,13 @@ import { DataService } from 'src/app/data.service';
   styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
-  productsEducation = productsEducation;
+  products : any;
   private line : any;
   private tabActive : any;
   private listTabItem : any;
   private listContentItem : any;
   isCheckShowFornRegister !: string;
-  constructor(private dataService : DataService) { }
+  constructor(private dataService : DataService, private productsService : ProductService) { }
 
   ngOnInit(): void {
     this.line = document.querySelector('.line');
@@ -25,6 +25,9 @@ export class ContentComponent implements OnInit {
     this.line.style.width = this.tabActive.offsetWidth + 'px';
     this.dataService.isCheckFromRegister.subscribe(data => this.isCheckShowFornRegister = data)
     this.isCheckShowFornRegister = 'none'
+    this.productsService.getProduct().subscribe(
+      res => this.products = res
+    )
   };
 
   changeActive(event : any) {

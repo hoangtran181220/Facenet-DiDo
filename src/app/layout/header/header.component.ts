@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
+import { CategoryService } from 'src/app/service/category.service';
 
 @Component({
   selector: 'app-header',
@@ -6,10 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  categoryList : any
 
-  constructor() { }
+  constructor(private category : CategoryService, private categoryId : DataService) { }
 
   ngOnInit(): void {
+    this.category.getCategory().subscribe(
+      res => this.categoryList = res
+    )
   }
 
   toggleHideSubMenu() {
@@ -21,4 +27,8 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  getCategoryId(categoryId : number) {
+    console.log(categoryId);
+    this.categoryId.setCategoryIdFromHeader(categoryId)
+  }
 }

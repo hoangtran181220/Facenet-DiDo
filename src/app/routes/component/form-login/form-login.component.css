@@ -7,6 +7,7 @@
   background-color: #ffffff;
   box-shadow: 0px 1px 8px rgb(0 0 0 / 35%);
   border-radius: 4px;
+  z-index: 999;
 }
 
 .form_login-header {
@@ -15,14 +16,6 @@
   padding: 16px 32px;
   font-size: 18px;
   font-family: Arial;
-}
-
-.form_login-header-close {
-
-}
-
-.form_login-content {
-
 }
 
 .form_login-content-input {

@@ -63,48 +63,63 @@
     </div>
     <div class="content_tab-content">
       <div class="content_tab-content-block active">
-        <div class="content_tab-content-item" id="0" *ngFor="let product of productsEducation">
-          <img class="content_tab-content-item--img" [src]=product.imgSrc>
-          <p class="content_tab-content-item--name">{{ product.name }}</p>
-          <span class="content_tab-content-item--cooperate">{{ product.cooperate }}</span>
-          <span class="content_tab-content-item--desc">{{ product.desc }}</span>
-          <img class="content_tab-content-item--rate" [src]=product.imgRate>
+        <div class="content_tab-content-item" id="0" *ngFor="let product of products">
+          <img class="content_tab-content-item--img" [src]="product.images">
+          <p class="content_tab-content-item--name">{{ product.productName }}</p>
+          <span class="content_tab-content-item--cooperate">{{ product.vendorId }}</span>
+          <span class="content_tab-content-item--desc">{{ product.description }}</span>
+          <span class="content_tab-content-item--rate">
+            <img src="../../../../assets/images/index/u39.png" style="width: 116px; height: 27px;">
+            {{ product.rating }}
+          </span>
         </div>
       </div>
       <div class="content_tab-content-block">
-        <div class="content_tab-content-item" id="1" *ngFor="let product of productsEducation">
-          <img class="content_tab-content-item--img" [src]=product.imgSrc>
-          <p class="content_tab-content-item--name">{{ product.name }}</p>
-          <span class="content_tab-content-item--cooperate">{{ product.cooperate }}</span>
-          <span class="content_tab-content-item--desc">{{ product.desc }}</span>
-          <img class="content_tab-content-item--rate" [src]=product.imgRate>
+        <div class="content_tab-content-item" id="1" *ngFor="let product of products">
+          <img class="content_tab-content-item--img" [src]="product.images">
+          <p class="content_tab-content-item--name">{{ product.productName }}</p>
+          <span class="content_tab-content-item--cooperate">{{ product.vendorId }}</span>
+          <span class="content_tab-content-item--desc">{{ product.description }}</span>
+          <span class="content_tab-content-item--rate">
+            <img src="../../../../assets/images/index/u39.png" style="width: 116px; height: 27px;">
+            {{ product.rating }}
+          </span>
         </div>
       </div>
       <div class="content_tab-content-block">
-        <div class="content_tab-content-item" id="2" *ngFor="let product of productsEducation">
-          <img class="content_tab-content-item--img" [src]=product.imgSrc>
-          <p class="content_tab-content-item--name">{{ product.name }}</p>
-          <span class="content_tab-content-item--cooperate">{{ product.cooperate }}</span>
-          <span class="content_tab-content-item--desc">{{ product.desc }}</span>
-          <img class="content_tab-content-item--rate" [src]=product.imgRate>
+        <div class="content_tab-content-item" id="2" *ngFor="let product of products">
+          <img class="content_tab-content-item--img" [src]="product.images">
+          <p class="content_tab-content-item--name">{{ product.productName }}</p>
+          <span class="content_tab-content-item--cooperate">{{ product.vendorId }}</span>
+          <span class="content_tab-content-item--desc">{{ product.description }}</span>
+          <span class="content_tab-content-item--rate">
+            <img src="../../../../assets/images/index/u39.png" style="width: 116px; height: 27px;">
+            {{ product.rating }}
+          </span>
         </div>
       </div>
       <div class="content_tab-content-block">
-        <div class="content_tab-content-item" id="3" *ngFor="let product of productsEducation">
-          <img class="content_tab-content-item--img" [src]=product.imgSrc>
-          <p class="content_tab-content-item--name">{{ product.name }}</p>
-          <span class="content_tab-content-item--cooperate">{{ product.cooperate }}</span>
-          <span class="content_tab-content-item--desc">{{ product.desc }}</span>
-          <img class="content_tab-content-item--rate" [src]=product.imgRate>
+        <div class="content_tab-content-item" id="3" *ngFor="let product of products">
+          <img class="content_tab-content-item--img" [src]="product.images">
+          <p class="content_tab-content-item--name">{{ product.productName }}</p>
+          <span class="content_tab-content-item--cooperate">{{ product.vendorId }}</span>
+          <span class="content_tab-content-item--desc">{{ product.description }}</span>
+          <span class="content_tab-content-item--rate">
+            <img src="../../../../assets/images/index/u39.png" style="width: 116px; height: 27px;">
+            {{ product.rating }}
+          </span>
         </div>
       </div>
       <div class="content_tab-content-block">
-        <div class="content_tab-content-item" id="4" *ngFor="let product of productsEducation">
-          <img class="content_tab-content-item--img" [src]=product.imgSrc>
-          <p class="content_tab-content-item--name">{{ product.name }}</p>
-          <span class="content_tab-content-item--cooperate">{{ product.cooperate }}</span>
-          <span class="content_tab-content-item--desc">{{ product.desc }}</span>
-          <img class="content_tab-content-item--rate" [src]=product.imgRate>
+        <div class="content_tab-content-item" id="4" *ngFor="let product of products">
+          <img class="content_tab-content-item--img" [src]="product.images">
+          <p class="content_tab-content-item--name">{{ product.productName }}</p>
+          <span class="content_tab-content-item--cooperate">{{ product.vendorId }}</span>
+          <span class="content_tab-content-item--desc">{{ product.description }}</span>
+          <span class="content_tab-content-item--rate">
+            <img src="../../../../assets/images/index/u39.png" style="width: 116px; height: 27px;">
+            {{ product.rating }}
+          </span>
         </div>
       </div>
       <div class="content_tab-content-btn-next">

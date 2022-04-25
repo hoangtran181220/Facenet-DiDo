@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from 'src/app/data.service';
 
 @Component({
   selector: 'app-form-login',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormLoginComponent implements OnInit {
 
-  constructor() { }
+  isCheckShowFormLogin : string = '';
+
+  constructor(private dataService : DataService) { }
 
   ngOnInit(): void {
+    this.dataService.isCheckFromLogin.subscribe(data => this.isCheckShowFormLogin = data)
+    this.isCheckShowFormLogin = 'none'
+  }
+
+  handleShowFormLogin() {
+    this.isCheckShowFormLogin = 'none'
+    this.dataService.setIsCheckFormLogin(this.isCheckShowFormLogin)
   }
 
 }

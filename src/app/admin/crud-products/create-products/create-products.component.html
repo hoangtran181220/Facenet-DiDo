@@ -94,11 +94,7 @@
         <span class="label-create-products-status">Danh mục: </span>
 
         <select title="catogory-list" id="catogory-list-item" (click)="getCategory($event)">
-          <option value="1">Giáo dục</option>
-          <option value="2">Y tế</option>
-          <option value="3">Giao thông</option>
-          <option value="4">Bán lẻ</option>
-          <option value="5">Ngân hàng</option>
+          <option *ngFor="let category of categoryList" [value]="category.catergoryId">{{ category.categoryName }}</option>
         </select>
       </div>
     </div>

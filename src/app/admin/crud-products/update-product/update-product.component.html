@@ -1,0 +1,66 @@
+<div class="product_update">
+  <div class="block-admin-account">
+    <div>
+      <img src="../../../../assets/images/index/u174.svg" alt="" class="notification-item-img">
+      <img src="../../../../assets/images/index/u71.png" alt="" class="admin-account-img">
+    </div>
+  </div>
+  <div class="product_update-content">
+    <div class="product_update-content-center">
+      <div class="product_update-content-center-input">
+        <input type="text" class="product_update-content-center-input--item" placeholder="Tên sản phẩm" [value]="productName" #newName>
+        <input type="text" class="product_update-content-center-input--item" placeholder="ID Đối tác" [value]="productVendorId" #newVendorId>
+        <input type="text" class="product_update-content-center-input--item" placeholder="Ảnh sản phẩm" [value]="productImage" #newImage>
+        <input type="text" class="product_update-content-center-input--item" placeholder="Mô tả" [value]="productDesc" #newDesc>
+        <input type="text" class="product_update-content-center-input--item" placeholder="Đánh giá" [value]="productRate" #newRate>
+        <select title="status-item" class="product_update-content-center-input--item" [value]="productStatus" #newStatus>
+          <option value="1">Activice</option>
+          <option value="0">UnActivice</option>
+        </select>
+        <select title="catogory-list" class="product_update-content-center-input--item" disabled>
+          <option *ngFor="let category of categoryList" [value]="category.catergoryId">{{ category.categoryName }}</option>
+        </select>
+        <button
+          type="button"
+          class="product_update-content-center-input--item update-product-btn"
+          (click)="handleUpdateProduct(newName.value, newVendorId.value, newImage.value, newDesc.value, newRate.value, newStatus.value)"
+        >
+          Cập nhật
+        </button>
+      </div>
+      <div class="product_update-content-center-table">
+        <table>
+          <thead>
+            <tr>
+              <th>ID Sản phẩm</th>
+              <th>Tên Sản phẩm</th>
+              <th>Image</th>
+              <th>Mô tả</th>
+              <th>Đánh giá</th>
+              <th>Trạng thái</th>
+              <th>Chức năng</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let product of products">
+              <td>{{ product.productId }}</td>
+              <td>{{ product.productName }}</td>
+              <td><img class="product_get-content-center--img" [src]="product.images"></td>
+              <td>{{ product.description }}</td>
+              <td>{{ product.rating }}</td>
+              <td *ngIf="product.status == true" style="color: rgb(16, 188, 16);">Activice</td>
+              <td *ngIf="product.status == false" style="color: rgb(249, 39, 39);" >UnActivice</td>
+              <td>
+                <button
+                  class="product_update-content-center-table--btn"
+                  (click)="getProductInfo(product.productId, product.productName, product.vendorId, product.images, product.description, product.rating, product.status)"
+                >Sửa</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
